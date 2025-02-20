@@ -15,45 +15,46 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
+-- Set leader keys
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
--- Setup lazy.nvim
+-- Load plugins using lazy.nvim
 require("lazy").setup({
-    spec = {
-      -- Catppuccin theme
-      { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  
-      -- nvim-tree.lua for file explorer
-      {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional icons
+  spec = {
+    { 
+        "catppuccin/nvim", name = "catppuccin", priority = 1000 
+    },
+    {
+      "nvim-tree/nvim-tree.lua",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = function()
+        require("config.plugins.filetree")
+      end,
+    },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+      config = function()
+        require("config.plugins.treesitter")
+      end,
+    },
+    {
+        "hrsh7th/nvim-cmp",        -- Autocompletion plugin
+        dependencies = {
+          "hrsh7th/cmp-nvim-lsp",  -- LSP source for nvim-cmp
+          "hrsh7th/cmp-buffer",    -- Buffer completions
+          "hrsh7th/cmp-path",      -- Path completions
+          "hrsh7th/cmp-cmdline",   -- Command-line completions
+          "L3MON4D3/LuaSnip",      -- Snippet engine
+          "saadparwaiz1/cmp_luasnip", -- Snippet completions
+        },
         config = function()
-          require("nvim-tree").setup({
-            view = {
-              width = 30,
-              side = "left",
-            },
-            renderer = {
-              icons = {
-                show = {
-                  file = true,
-                  folder = true,
-                }
-              }
-            }
-          })
-          -- Keymap to toggle the file explorer
-          vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+          require("config.plugins.cmp")
         end,
       }
-    },
-  
-    -- Additional Lazy.nvim settings
-    install = { colorscheme = { "catppuccin" } },
-    checker = { enabled = true },
-  })
+      
+  },
+
+  checker = { enabled = true },
+})
