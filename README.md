@@ -4,7 +4,7 @@ This is my personal Neovim configuration that enhances the editing experience wi
 
 ## Prerequisites
 
-Before setting up the configuration, make sure you follow the [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
+Before setting up the configuration, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
 
 ## Plugins
 
@@ -21,6 +21,6 @@ Before setting up the configuration, make sure you follow the [requirements](htt
 ## LSP
 
 -   [Mason](https://github.com/williamboman/mason-lspconfig.nvim): Closes some gaps that exist between `mason.nvim` and `lspconfig`.
--   [Mason-lspconfig](https://github.com/williamboman/mason.nvim): Allows you to easily manage external editor tooling such as LSP servers, DAP servers, linters, and formatters.
+-   [Mason-lspconfig](https://github.com/williamboman/mason.nvim): Allows you to easily manage external editor tooling such as LSP servers and more.
 -   [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp): A completion engine plugin for Neovim written in Lua.
 -   [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Provides basic, default Nvim LSP client configurations for various LSP servers.
