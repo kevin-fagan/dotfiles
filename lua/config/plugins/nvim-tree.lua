@@ -9,13 +9,14 @@ return {
                 side = "left",
             },
             renderer = {
-            icons = {
-                show = {
-                    file = true,
-                    folder = true,
+                icons = {
+                    show = {
+                        file = true,
+                        folder = true,
                     }
                 }
             }
         })
     end,
 }
+
