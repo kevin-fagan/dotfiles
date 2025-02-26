@@ -2,6 +2,8 @@
 
 This is my personal Neovim configuration that enhances the editing experience with a set of plugins and customizations.
 
+![Screenshot from 2025-02-26 17-59-03](https://github.com/user-attachments/assets/1729fc22-8334-4050-a8e2-d1a3c785a1d9)
+
 ## Prerequisites
 
 Before setting up the configuration, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
