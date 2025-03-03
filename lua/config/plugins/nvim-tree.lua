@@ -5,7 +5,7 @@ return {
         local nvimtree = require("nvim-tree")
         nvimtree.setup({
             view = {
-                width = 35,
+                width = 40,
                 side = "left",
             },
             renderer = {
@@ -19,4 +19,3 @@ return {
         })
     end,
 }
-
