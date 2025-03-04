@@ -12,6 +12,5 @@ vim.opt.cursorline = true
 
 vim.opt.list = true -- Enable showing invisible characters
 vim.opt.listchars = {
-	space = "·", -- Show a dot for spaces
-	tab = "» ", -- Show a special character for tabs
+    tab = "» ",     -- Show a special character for tabs
 }

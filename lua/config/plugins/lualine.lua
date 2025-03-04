@@ -2,71 +2,63 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-        local lualine = require("lualine")
-        local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-
         local colors = {
-            blue = "#65D1FF",
-            green = "#3EFFDC",
-            violet = "#FF61EF",
-            yellow = "#FFDA7B",
-            red = "#FF4A4A",
-            fg = "#c3ccdc",
-            bg = "#112638",
-            inactive_bg = "#2c3043",
+            blue     = '#7e9cd8',       -- Kanagawa Blue
+            cyan     = '#7fdbca',       -- Kanagawa Cyan
+            black    = '#1f1f28',       -- Kanagawa background
+            white    = '#dcd7ba',       -- Kanagawa White
+            red      = '#f7768e',       -- Kanagawa Red
+            violet   = '#bb9af7',       -- Kanagawa Violet
+            grey     = '#3b4252',       -- Kanagawa Grey
+            yellow   = '#e0af68',       -- Kanagawa Yellow
+            green    = '#9ece6a',       -- Kanagawa Green
+            inactive = '#16161d',       -- Black used for the inactive windows
         }
 
-        local my_lualine_theme = {
+        local kanagawa_theme = {
             normal = {
-                a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
-                b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
+                a = { fg = colors.black, bg = colors.violet },
+                b = { fg = colors.white, bg = colors.grey },
+                c = { fg = colors.white },
             },
-            insert = {
-                a = { bg = colors.green, fg = colors.bg, gui = "bold" },
-                b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
-            },
-            visual = {
-                a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
-                b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
-            },
-            command = {
-                a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
-                b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
-            },
-            replace = {
-                a = { bg = colors.red, fg = colors.bg, gui = "bold" },
-                b = { bg = colors.bg, fg = colors.fg },
-                c = { bg = colors.bg, fg = colors.fg },
-            },
+
+            insert = { a = { fg = colors.black, bg = colors.blue } },
+            visual = { a = { fg = colors.black, bg = colors.cyan } },
+            replace = { a = { fg = colors.black, bg = colors.red } },
+
             inactive = {
-                a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-                b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-                c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+                a = { fg = colors.white, bg = colors.inactive },
+                z = { fg = colors.white, bg = colors.inactive },
             },
         }
 
-        -- configure lualine with modified theme
-        lualine.setup({
+        require('lualine').setup {
             options = {
-                theme = my_lualine_theme,
+                theme = kanagawa_theme,
+                component_separators = '',
+                section_separators = { left = '', right = '' },
+                disabled_filetypes = { "NvimTree" },
             },
             sections = {
-                lualine_x = {
-                    {
-                        lazy_status.updates,
-                        cond = lazy_status.has_updates,
-                        color = { fg = "#ff9e64" },
-                    },
-                    { "encoding" },
-                    { "fileformat" },
-                    { "filetype" },
+                lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+                lualine_b = { 'filename', 'branch', 'diff' },
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = { 'filetype', 'progress' },
+                lualine_z = {
+                    { 'location', separator = { right = '' }, left_padding = 2 },
                 },
             },
-        })
+            inactive_sections = {
+                lualine_a = { 'filename' },
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = { 'filetype' },
+            },
+            tabline = {},
+            extensions = {},
+        }
     end,
 }
-

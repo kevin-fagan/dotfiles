@@ -5,7 +5,7 @@ Before setting up the configuration, make sure you follow the Lazy [requirements
 ## Plugins
 
 -   [Alpha.nvim](https://github.com/goolord/alpha-nvim): A fast and customizable dashboard that appears on startup.
--   [Github-nvim-theme](https://github.com/projekt0n/github-nvim-theme): Github's Neovim themes.
+-   [Kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim): Theme inspired by colors of the painting Katsushika Hokusai.
 -   [Comment.nvim](https://github.com/numToStr/Comment.nvim): Provides easy commenting functionality with support for multiple languages.
 -   [Conform.nvim](https://github.com/stevearc/conform.nvim): A modern configuration for code formatting and linting.
 -   [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): A fast, customizable status line for Neovim.
