@@ -5,7 +5,6 @@ Before setting up the configuration, make sure you follow the Lazy [requirements
 ## Plugins
 
 -   [Alpha.nvim](https://github.com/goolord/alpha-nvim): A fast and customizable dashboard that appears on startup.
--   [Kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim): Theme inspired by colors of the painting Katsushika Hokusai.
 -   [Comment.nvim](https://github.com/numToStr/Comment.nvim): Provides easy commenting functionality with support for multiple languages.
 -   [Conform.nvim](https://github.com/stevearc/conform.nvim): A modern configuration for code formatting and linting.
 -   [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): A fast, customizable status line for Neovim.
@@ -13,6 +12,7 @@ Before setting up the configuration, make sure you follow the Lazy [requirements
 -   [Nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): A file explorer tree to help with easy navigation within your project.
 -   [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Syntax highlighting, code folding, and text object selection using Treesitter.
 -   [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): A highly extendable fuzzy finder for searching files, buffers, and more.
+-   [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme): Github's Neovim themes. 
 
 ## LSP
 
