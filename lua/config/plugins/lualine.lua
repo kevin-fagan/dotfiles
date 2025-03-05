@@ -11,13 +11,14 @@ return {
             green  = '#56d364', -- GitHub Green
             yellow = '#fef2c0', -- GitHub Yellow
             gray   = '#6a737d', -- GitHub Gray
+            darkbg = '#2f363d', -- Darker Background for lualine to stand out
         }
 
         local github_dark_theme = {
             normal = {
                 a = { fg = colors.black, bg = colors.blue },
-                b = { fg = colors.white, bg = colors.black },
-                c = { fg = colors.white, bg = colors.black },
+                b = { fg = colors.white, bg = colors.darkbg }, -- Update to darkbg
+                c = { fg = colors.white, bg = colors.darkbg }, -- Update to darkbg
             },
 
             insert = { a = { fg = colors.black, bg = colors.green } },
@@ -25,12 +26,12 @@ return {
             replace = { a = { fg = colors.black, bg = colors.red } },
 
             inactive = {
-                a = { fg = colors.white, bg = colors.black },
-                b = { fg = colors.white, bg = colors.black },
-                c = { fg = colors.white, bg = colors.black },
-                x = { fg = colors.white, bg = colors.black },
-                y = { fg = colors.white, bg = colors.black },
-                z = { fg = colors.white, bg = colors.black },
+                a = { fg = colors.white, bg = colors.darkbg },
+                b = { fg = colors.white, bg = colors.darkbg },
+                c = { fg = colors.white, bg = colors.darkbg },
+                x = { fg = colors.white, bg = colors.darkbg },
+                y = { fg = colors.white, bg = colors.darkbg },
+                z = { fg = colors.white, bg = colors.darkbg },
             },
         }
 
