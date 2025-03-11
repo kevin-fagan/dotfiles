@@ -29,5 +29,6 @@ vim.keymap.set('n', '<leader>fd', builtin.lsp_definitions, opts)
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, opts)
 
 -- LSP Mappings
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-vim.keymap.set('n', 'gn', vim.lsp.buf.rename, opts)
+vim.keymap.set('n', 'ch', vim.lsp.buf.hover, opts)
+vim.keymap.set('n', 'cr', vim.lsp.buf.rename, opts)
+vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, opts)

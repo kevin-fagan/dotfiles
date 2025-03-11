@@ -7,7 +7,7 @@ return {
                 lsp_format = "fallback",
             },
             formatters_by_ft = {
-                go = { "gofmt" },
+                go = { "goimports", "gofmt" },
                 lua = { "stylua" },
             },
         })
