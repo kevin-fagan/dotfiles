@@ -1,18 +1,19 @@
 # Dotfiles
-Dotfile are managed using [GNU Stow](https://www.gnu.org/software/stow/). 
-To ensure Stow works correctly, clone this repository into your home directory. 
-The directory structure of each Stow package is designed so that Stow knows where to 
-create the appropriate symlinks. If you are interested, [here](https://www.jakewiesler.com/blog/managing-dotfiles) 
-is a pretty good article to help you get started.
+Dotfile are managed using [GNU Stow](https://www.gnu.org/software/stow/). To ensure Stow works 
+correctly, clone this repository into your home directory. The directory structure of each Stow 
+package is designed so that Stow knows where to create the appropriate symlinks. If you are 
+interested, [here](https://www.jakewiesler.com/blog/managing-dotfiles) is a pretty good article to help you get started.
 
 # Installing Stow Packages
-- nvim: `stow nvim`
-- ghostty: `stow ghostty`
-- zsh: `stow zsh`
-- tmux: `stow tmux`
+| Package | Command        |
+|---------|----------------|
+| nvim    | `stow nvim`    |
+| ghostty | `stow ghostty` |
+| zsh     | `stow zsh`     |
+| tmux    | `stow tmux`    |
 
 ## Nvim
-Before setting up the configuration, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
+Before Nvim can be setup using Lazy, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
 
 ### Plugins
 -   [Comment.nvim](https://github.com/numToStr/Comment.nvim): Provides easy commenting functionality with support for multiple languages.
