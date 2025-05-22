@@ -1,0 +1,6 @@
+theme = GitHub-Dark-Dimmed
+
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = false
+clipboard-paste-protection = false
