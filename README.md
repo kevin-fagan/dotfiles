@@ -19,3 +19,6 @@ Before setting up the configuration, make sure you follow the Lazy [requirements
 -   [Mason-lspconfig](https://github.com/williamboman/mason.nvim): Allows you to easily manage external editor tooling such as LSP servers and more.
 -   [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp): A completion engine plugin for Neovim written in Lua.
 -   [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Provides basic, default Nvim LSP client configurations for various LSP servers.
+
+## Misc.
+- [ripgrep](https://github.com/BurntSushi/ripgrep): Recursively searches directories for a regex pattern. Used by the Neovim Telescope plugin.
