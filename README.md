@@ -9,8 +9,6 @@ this repository should be cloned into your home directory.
 - tmux: `stow tmux`
 
 ## Nvim
-
-### Prerequisites
 Before setting up the configuration, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
 
 ### Plugins
