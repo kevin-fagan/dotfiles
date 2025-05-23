@@ -5,12 +5,12 @@ package is designed so that Stow knows where to create the appropriate symlinks.
 interested, [here](https://www.jakewiesler.com/blog/managing-dotfiles) is a pretty good article to help you get started.
 
 # Installing Stow Packages
-| Package | Command        |
-|---------|----------------|
-| nvim    | `stow nvim`    |
-| ghostty | `stow ghostty` |
-| zsh     | `stow zsh`     |
-| tmux    | `stow tmux`    |
+| Stow Package | Command        |
+|--------------|----------------|
+| nvim         | `stow nvim`    |
+| ghostty      | `stow ghostty` |
+| zsh          | `stow zsh`     |
+| tmux         | `stow tmux`    |
 
 ## Nvim
 Before Nvim can be setup using Lazy, make sure you follow the Lazy [requirements](https://lazy.folke.io/#%EF%B8%8F-requirements)
