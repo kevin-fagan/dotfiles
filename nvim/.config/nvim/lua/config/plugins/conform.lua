@@ -9,6 +9,9 @@ return {
             formatters_by_ft = {
                 go = { "goimports", "gofmt" },
                 lua = { "stylua" },
+                javascript = { "prettier" },
+                html = { "prettier" },
+                css = { "prettier" }
             },
         })
     end

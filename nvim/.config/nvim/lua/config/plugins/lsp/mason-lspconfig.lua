@@ -6,7 +6,7 @@ return {
                 "lua_ls",
                 "gopls",
                 "html",
-                "cssls"
+                "cssls",
             },
         })
     end
