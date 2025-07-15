@@ -1,5 +1,6 @@
 theme = GitHub-Dark-Dimmed
 
+font-size = 10
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = false

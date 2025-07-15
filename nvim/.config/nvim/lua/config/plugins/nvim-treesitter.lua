@@ -2,7 +2,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-        local treesitter = require("nvim-treesitter")
+        local treesitter = require("nvim-treesitter.configs")
         treesitter.setup({
             ensure_installed = {
                 "go",
@@ -16,8 +16,7 @@ return {
                 "toml",
                 "terraform",
                 "markdown",
-                "dockerfile",
-                "bash"
+                "dockerfile"
             },
             auto_install = true,
             highlight = {

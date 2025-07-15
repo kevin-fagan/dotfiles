@@ -3,16 +3,17 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         local colors = {
-            blue   = '#58a6ff', -- GitHub Blue
-            cyan   = '#56d4d5', -- GitHub Cyan
-            black  = '#24292f', -- GitHub Background
-            white  = '#c9d1d9', -- GitHub Foreground
-            red    = '#f97583', -- GitHub Red
-            green  = '#56d364', -- GitHub Green
-            yellow = '#fef2c0', -- GitHub Yellow
-            gray   = '#6a737d', -- GitHub Gray
-            darkbg = '#2f363d', -- Darker Background for lualine to stand out
+            black  = '#0d1117', -- Background
+            white  = '#e6edf3', -- Foreground
+            gray   = '#8b949e', -- Muted text
+            blue   = '#2f81f7', -- Accent blue
+            green  = '#3fb950', -- GitHub green
+            red    = '#f85149', -- GitHub red
+            yellow = '#d29922', -- GitHub yellow
+            cyan   = '#a5d6ff', -- Lighter cyan / info
+            darkbg = '#161b22', -- UI panels / sidebar / lualine bg
         }
+
 
         local github_dark_theme = {
             normal = {
