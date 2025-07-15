@@ -5,7 +5,7 @@ return {
         local nvimtree = require("nvim-tree")
         nvimtree.setup({
             view = {
-                width = 35,
+                width = 40,
                 side = "left",
             },
             renderer = {
@@ -15,7 +15,11 @@ return {
                         folder = true,
                     }
                 }
-            }
+            },
+            filters = {
+                dotfiles = false,
+                git_ignored = false,
+            },
         })
     end,
 }

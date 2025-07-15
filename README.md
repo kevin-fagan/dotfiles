@@ -23,7 +23,7 @@ Before Nvim can be setup using Lazy, make sure you follow the Lazy [requirements
 -   [Nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): A file explorer tree to help with easy navigation within your project.
 -   [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Syntax highlighting, code folding, and text object selection using Treesitter.
 -   [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): A highly extendable fuzzy finder for searching files, buffers, and more.
--   [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme): Github's Neovim themes. 
+-   [everforest-nvim-theme](https://github.com/sainnhe/everforest): Everforest Neovim themes. 
 
 ### LSP
 -   [Mason](https://github.com/williamboman/mason-lspconfig.nvim): Closes some gaps that exist between `mason.nvim` and `lspconfig`.

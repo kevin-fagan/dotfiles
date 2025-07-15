@@ -5,10 +5,9 @@ vim.opt.relativenumber = true -- Show relative line numbers
 -- Display
 vim.opt.colorcolumn = "100" -- Highlight column 100
 vim.opt.cursorline = true   -- Highlight current line
-vim.opt.list = true         -- Show invisible characters (e.g., spaces, tabs)
+vim.opt.list = true         -- Show invisible characters
 vim.opt.listchars = {       -- Customize invisible characters
     tab = "» ",             -- Use a special character for tabs
-    space = ".",            -- Use a dot for spaces
 }
 
 -- Indentation
