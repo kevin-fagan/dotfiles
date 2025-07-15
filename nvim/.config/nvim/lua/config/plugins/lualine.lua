@@ -1,9 +1,8 @@
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         local colors = {
-            black  = "#272e33", -- ⬅️ Slightly lighter than #1e2326 for better visibility
+            black  = "#272e33", -- lightly lighter than #1e2326 for better visibility
             darkbg = "#2e383c", -- Mid-level UI background
             white  = "#d3c6aa", -- Foreground
             gray   = "#859289", -- Muted
