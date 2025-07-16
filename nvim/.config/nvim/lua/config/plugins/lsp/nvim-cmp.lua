@@ -1,6 +1,10 @@
 return {
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-nvim-lsp" },
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp",
+        "tailwind-tools",
+        "onsails/lspkind-nvim"
+    },
     config = function()
         local cmp = require("cmp")
 

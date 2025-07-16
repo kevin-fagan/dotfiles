@@ -1,3 +1,4 @@
+-- Web Dev Icons is a Neovim plugin that provides Nerd Font icons for the appropriate file type
 return {
     {
         "nvim-tree/nvim-web-devicons",
@@ -5,7 +6,7 @@ return {
             default = true,
             override = {
                 go = {
-                    icon = "", -- nf-seti-go2
+                    icon = "",
                     color = "#00ADD8",
                     cterm_color = "61",
                     name = "Go",

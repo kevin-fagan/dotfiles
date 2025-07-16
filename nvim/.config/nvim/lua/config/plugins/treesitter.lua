@@ -1,3 +1,5 @@
+-- Treesitter is a Neovim plugin that allows for syntax highlighting. For Treesitter
+-- to perform proper highlighting for a language, the corresponding parsers need to be installed
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",

@@ -1,3 +1,5 @@
+-- Conform is a formatter for Neovim. Conform itself does not format files,
+-- rather it calls an exisiting formatter / linter whch must be installed locally
 return {
     "stevearc/conform.nvim",
     config = function()

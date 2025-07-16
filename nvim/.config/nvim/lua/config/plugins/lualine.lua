@@ -1,26 +1,26 @@
+-- Lualine is a statusline plugin for Neovim. This config will show what Github branch you are on,
+-- which buffer you are currently viewing, file type, and more. Its also customized to match
+-- the Everforest theme
 return {
     "nvim-lualine/lualine.nvim",
     config = function()
         local colors = {
-            black  = "#272e33", -- lightly lighter than #1e2326 for better visibility
-            darkbg = "#2e383c", -- Mid-level UI background
-            white  = "#d3c6aa", -- Foreground
-            gray   = "#859289", -- Muted
-            blue   = "#7fbbb3", -- Accent blue
-            green  = "#a7c080", -- Success / function
-            red    = "#e67e80", -- Error / keyword
-            yellow = "#dbbc7f", -- Warnings / constants
-            cyan   = "#83c092", -- Hints / operators
+            black  = "#272e33",
+            darkbg = "#2e383c",
+            white  = "#d3c6aa",
+            gray   = "#859289",
+            blue   = "#7fbbb3",
+            green  = "#a7c080",
+            red    = "#e67e80",
+            yellow = "#dbbc7f",
+            cyan   = "#83c092",
         }
 
-
-
-
-        local github_dark_theme = {
+        local everforest_theme = {
             normal = {
                 a = { fg = colors.black, bg = colors.blue },
-                b = { fg = colors.white, bg = colors.darkbg }, -- Update to darkbg
-                c = { fg = colors.white, bg = colors.darkbg }, -- Update to darkbg
+                b = { fg = colors.white, bg = colors.darkbg },
+                c = { fg = colors.white, bg = colors.darkbg },
             },
 
             insert = { a = { fg = colors.black, bg = colors.green } },
@@ -39,7 +39,7 @@ return {
 
         require('lualine').setup {
             options = {
-                theme = github_dark_theme,
+                theme = everforest_theme,
                 component_separators = { left = '', right = '' },
                 disabled_filetypes = { "NvimTree" },
             },

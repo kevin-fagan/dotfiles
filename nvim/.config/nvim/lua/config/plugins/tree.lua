@@ -1,3 +1,4 @@
+-- Tree is a Neovim plugin that displays the current file tree
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },

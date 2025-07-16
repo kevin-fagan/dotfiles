@@ -1,3 +1,5 @@
+-- Highlight Colors is a Neovim plugin that highlights colors represented in
+-- HEX, RGB, HSL and a few others
 return {
     {
         "brenoprata10/nvim-highlight-colors",
