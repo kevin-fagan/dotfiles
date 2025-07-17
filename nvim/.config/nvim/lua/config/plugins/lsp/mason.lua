@@ -5,6 +5,7 @@ return {
         require("mason-tool-installer").setup({
             ensure_installed = {
                 "prettier",
+                "tailwindcss-language-server"
             },
         })
     end
