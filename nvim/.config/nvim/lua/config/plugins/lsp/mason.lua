@@ -1,11 +1,14 @@
 return {
     "williamboman/mason.nvim",
     config = function()
-        require("mason").setup()
-        require("mason-tool-installer").setup({
-            ensure_installed = {
-                "prettier",
-                "tailwindcss-language-server"
+        require("mason").setup({
+            ui = {
+                border = "rounded",
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                },
             },
         })
     end

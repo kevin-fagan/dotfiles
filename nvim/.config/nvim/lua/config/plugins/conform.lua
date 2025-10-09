@@ -11,6 +11,7 @@ return {
             formatters_by_ft = {
                 go = { "goimports", "gofmt" },
                 lua = { "stylua" },
+                vue = { "prettier" },
                 javascript = { "prettier" },
                 html = { "prettier" },
                 css = { "prettier" }

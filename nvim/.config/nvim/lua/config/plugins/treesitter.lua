@@ -18,7 +18,8 @@ return {
                 "toml",
                 "terraform",
                 "markdown",
-                "dockerfile"
+                "dockerfile",
+                "vue"
             },
             auto_install = true,
             highlight = {
