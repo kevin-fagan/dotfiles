@@ -6,8 +6,8 @@ return {
 			"lua_ls",
 			"gopls",
 			"ts_ls",
-			"volar",
 			"html",
+			"vue_ls",
 			"tailwindcss",
 			"cssls",
 		},
@@ -18,7 +18,6 @@ return {
 	},
 	config = function(_, opts)
 		require("mason-lspconfig").setup(opts)
-
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -41,8 +40,7 @@ return {
 			filetypes = { "typescript", "javascript", "vue" },
 		})
 
-		-- Setup Volar for Vue files
-		lspconfig.volar.setup({
+		lspconfig.vue_ls.setup({
 			capabilities = capabilities,
 			filetypes = { "vue" },
 		})

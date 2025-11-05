@@ -42,4 +42,4 @@ vim.keymap.set("n", "<leader>Q", ":q!<CR>", opts) -- Exit without saving
 vim.keymap.set("n", "<leader>p", '"+p', opts) -- Paste clipboard
 vim.keymap.set("n", "<C-s>", ":w<CR>", opts) -- Save File
 vim.keymap.set("i", "jk", "<Esc>", opts) -- Exit insert mode
-vim.keymap.set("n", "<leader><leader>", ":b#<CR>", opts)
+vim.keymap.set("n", "<leader><leader>", ":b#<CR>", opts) -- Go to previous buffer
