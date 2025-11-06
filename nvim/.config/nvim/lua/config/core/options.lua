@@ -1,22 +1,39 @@
--- Line numbering
-vim.opt.number = true -- Show absolute line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
+-- Line numbering --
+--
+-- Shows absolute line number on the left
+vim.opt.number = true
+-- Shows relative line numbers relative to the cursor line
+vim.opt.relativenumber = true
 
--- Display
-vim.opt.colorcolumn = "100" -- Highlight column 100
-vim.opt.cursorline = true -- Highlight current line
-vim.opt.list = true -- Show invisible characters
-vim.opt.listchars = { -- Customize invisible characters
-	tab = "» ", -- Use a special character for tabs
+-- Display --
+--
+-- Draws a vertical line at column 100 (useful for max line length)
+vim.opt.colorcolumn = "100"
+-- Highlights the entire line where your cursor is
+vim.opt.cursorline = true
+-- Displays invisible characters
+vim.opt.list = true
+-- Defines how invisible characters are displayed
+vim.opt.listchars = {
+	tab = "» ",
 }
 
--- Indentation
-vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.autoindent = true -- Auto-indent new lines
-vim.opt.smartindent = true -- Smart indentation
-vim.opt.tabstop = 4 -- Spaces per tab
-vim.opt.shiftwidth = 4 -- Spaces per indentation level
-vim.opt.softtabstop = 4 -- Spaces when pressing Tab
+-- Indentation --
+--
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
+-- Copy indent from current line when starting a new line
+vim.opt.autoindent = true
+-- Do smart autoindenting when starting a new line
+vim.opt.smartindent = true
+-- Number of spaces a tab counts for
+vim.opt.tabstop = 4
+-- Number of spaces used for each step of (auto)indent
+vim.opt.shiftwidth = 4
+-- Number of spaces a Tab counts for while editing (insert mode)
+vim.opt.softtabstop = 4
 
--- Misc settings
-vim.opt.wrap = false -- Disable line wrapping
+-- Misc --
+--
+-- Disable text wrapping
+vim.opt.wrap = false

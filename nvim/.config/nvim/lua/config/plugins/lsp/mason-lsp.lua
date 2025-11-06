@@ -21,7 +21,7 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		-- get_install_path keeps returning nil, while the hardcoded path does not
+		-- get_install_path keeps returning nil, so I have to hardcode it for now
 		local vue_language_server =
 			vim.fn.expand("~/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server")
 
