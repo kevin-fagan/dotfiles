@@ -20,6 +20,7 @@ return {
 				"markdown",
 				"dockerfile",
 				"vue",
+				"vcl",
 			},
 			auto_install = true,
 			highlight = {
