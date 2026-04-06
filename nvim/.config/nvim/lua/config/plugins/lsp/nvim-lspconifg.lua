@@ -1,16 +1,15 @@
 return {
-	"neovim/nvim-lspconfig",
-	config = function()
-		local lspconfig = require("lspconfig")
-		lspconfig.lua_ls.setup({
-			settings = {
-				Lua = {
-					diagnostics = {
-						-- Tell Lua LSP these globals are valid
-						globals = { "vim" },
-					},
-				},
-			},
-		})
-	end,
+    "neovim/nvim-lspconfig",
+    config = function()
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                },
+            },
+        })
+        vim.lsp.enable("lua_ls")
+    end,
 }

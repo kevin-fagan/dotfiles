@@ -1,48 +1,47 @@
 -- Used to install LSPs via Mason
 return {
-	"mason-org/mason-lspconfig.nvim",
-	opts = {
-		ensure_installed = {
-			"lua_ls",
-			"gopls",
-			"ts_ls",
-			"html",
-			"vue_ls",
-			"tailwindcss",
-			"cssls",
-		},
-	},
-	dependencies = {
-		{ "mason-org/mason.nvim", opts = {} },
-		"neovim/nvim-lspconfig",
-	},
-	config = function(_, opts)
-		require("mason-lspconfig").setup(opts)
-		local lspconfig = require("lspconfig")
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    "mason-org/mason-lspconfig.nvim",
+    opts = {
+        ensure_installed = {
+            "lua_ls",
+            "gopls",
+            "ts_ls",
+            "html",
+            "vue_ls",
+            "cssls",
+        },
+    },
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+    config = function(_, opts)
+        require("mason-lspconfig").setup(opts)
 
-		-- get_install_path keeps returning nil, so I have to hardcode it for now
-		local vue_language_server =
-			vim.fn.expand("~/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local vue_language_server = vim.fn.expand(
+            "~/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server"
+        )
 
-		-- Setup ts_ls with Vue plugin
-		lspconfig.ts_ls.setup({
-			capabilities = capabilities,
-			init_options = {
-				plugins = {
-					{
-						name = "@vue/typescript-plugin",
-						location = vue_language_server,
-						languages = { "vue" },
-					},
-				},
-			},
-			filetypes = { "typescript", "javascript", "vue" },
-		})
+        vim.lsp.config("ts_ls", {
+            capabilities = capabilities,
+            init_options = {
+                plugins = {
+                    {
+                        name = "@vue/typescript-plugin",
+                        location = vue_language_server,
+                        languages = { "vue" },
+                    },
+                },
+            },
+            filetypes = { "typescript", "javascript", "vue" },
+        })
 
-		lspconfig.vue_ls.setup({
-			capabilities = capabilities,
-			filetypes = { "vue" },
-		})
-	end,
+        vim.lsp.config("vue_ls", {
+            capabilities = capabilities,
+            filetypes = { "vue" },
+        })
+
+        vim.lsp.enable({ "ts_ls", "vue_ls" })
+    end,
 }
