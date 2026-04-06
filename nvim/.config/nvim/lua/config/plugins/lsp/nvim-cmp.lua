@@ -6,11 +6,18 @@ return {
     },
     config = function()
         local cmp = require("cmp")
+        local lspkind = require("lspkind")
 
         cmp.setup({
             window = {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
+            },
+            formatting = {
+                format = lspkind.cmp_format({
+                    mode = "symbol_text",
+                    maxwidth = 50,
+                }),
             },
             mapping = cmp.mapping.preset.insert({
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
