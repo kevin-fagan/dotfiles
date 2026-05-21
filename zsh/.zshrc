@@ -1,5 +1,6 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 ZSH_THEME="agnoster"
 
